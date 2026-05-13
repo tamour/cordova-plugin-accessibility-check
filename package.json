@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-accessibility-check",
+  "version": "1.0.0",
+  "author": "Tamour Ahmad",
+  "description": "Detects Accessibility Master Toggle and Active Service State on Android.",
+  "cordova": {
+    "id": "cordova-plugin-accessibility-check",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tamour/Accessibility-Check.git"
+  },
+  "license": "MIT"
+}

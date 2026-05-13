@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-accessibility-check"
+        version="1.0.0">
+
+    <!-- Plugin Display Name -->
+    <name>AccessibilityMasterCheck</name>
+
+    <!-- Plugin Description -->
+    <description>
+        Cordova plugin for detecting Android Accessibility settings,
+        active accessibility services, and enabled accessibility services.
+    </description>
+
+    <!-- Plugin Author -->
+    <author>
+        Tamour Ahmad
+    </author>
+
+    <!-- License -->
+    <license>MIT</license>
+
+    <!-- Repository Information -->
+    <repo>
+        https://github.com/YOUR_GITHUB_USERNAME/cordova-plugin-accessibility-check
+    </repo>
+
+    <!-- Search Keywords -->
+    <keywords>
+        cordova,
+        android,
+        accessibility,
+        accessibility-service,
+        accessibility-manager,
+        outsystems
+    </keywords>
+
+    <!-- JavaScript Interface -->
+    <js-module src="www/AccessibilityMaster.js"
+               name="AccessibilityMaster">
+
+        <!-- Makes plugin accessible via window.AccessibilityMaster -->
+        <clobbers target="AccessibilityMaster" />
+
+    </js-module>
+
+    <!-- Android Platform Configuration -->
+    <platform name="android">
+
+        <!-- Register native plugin -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AccessibilityMaster">
+                <param name="android-package" value="com.plugin.accessibility.AccessibilityMaster" />
+            </feature>
+        </config-file>
+
+        <!-- Native Java source -->
+        <source-file src="src/android/AccessibilityMaster.java" target-dir="src/com/plugin/accessibility" />
+    </platform>
+</plugin>
